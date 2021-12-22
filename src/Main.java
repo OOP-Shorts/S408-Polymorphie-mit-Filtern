@@ -9,9 +9,26 @@ public class Main {
     };
 
     public static void main(String[] args) {
+        Dog[] dogs = removeCatsFromList(ANIMAL_LIST);
+        System.out.println(dogs.length);
     }
 
-    /*
-        Ergänze hier die neue Methode 'removeCatsFromList'.
-     */
+
+    private static Dog[] removeCatsFromList(Animal[] animals) {
+        int numOfDogs = 0;
+        for (Animal animal : animals) {
+            if (animal instanceof Dog) {
+                numOfDogs++;
+            }
+        }
+        Dog[] dogs = new Dog[numOfDogs];
+        int dogCounter = 0;
+        for (Animal animal : animals) {
+            if (animal instanceof Dog) {
+                dogs[dogCounter] = (Dog) animal;
+                dogCounter++;
+            }
+        }
+        return dogs;
+    }
 }

@@ -6,4 +6,12 @@ public class Dog extends Animal {
         super(name, age);
         this.breed = breed;
     }
+
+    public String getBreed() {
+        return breed;
+    }
+
+    public void setBreed(String breed) {
+        this.breed = breed;
+    }
 }
