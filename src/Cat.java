@@ -6,4 +6,12 @@ public class Cat extends Animal {
         super(name, age);
         this.hasLongFur = hasLongFur;
     }
+
+    public boolean isHasLongFur() {
+        return hasLongFur;
+    }
+
+    public void setHasLongFur(boolean hasLongFur) {
+        this.hasLongFur = hasLongFur;
+    }
 }
